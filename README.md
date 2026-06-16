@@ -1,10 +1,10 @@
-# Template generico para pagina academica
+# Template genérico para página acadêmica
 
-Este diretorio contem uma versao limpa da pagina academica. Ela gera o conteudo principal a partir de um arquivo Lattes `cv.xml` e usa `site-config.json` para pequenos ajustes visuais e links externos.
+Este diretório contem uma versao limpa da página acadêmica. Ela gera o conteúdo principal a partir de um arquivo Lattes `cv.xml` e usa `site-config.json` para pequenos ajustes visuais e links externos.
 
 ## Arquivos principais
 
-Mantenha estes arquivos juntos no mesmo diretorio do servidor:
+Mantenha estes arquivos juntos no mesmo diretório do servidor:
 
 - `index.html`
 - `styles.css`
@@ -20,13 +20,13 @@ Opcional:
 
 - uma foto de perfil, por exemplo `foto.jpeg`
 
-## Roteiro rapido
+## Roteiro rápido
 
 1. Exporte o curriculo Lattes em XML.
 2. Renomeie o arquivo exportado para `cv.xml`.
 3. Coloque `cv.xml` neste diretorio.
 4. Edite `site-config.json`.
-5. Se for usar foto, coloque a imagem neste diretorio e preencha o campo `photo`.
+5. Se for usar foto, coloque a imagem neste diretório e preencha o campo `photo`.
 6. Rode:
 
 ```bash
@@ -45,7 +45,7 @@ python3 -m http.server 8765
 http://localhost:8765/
 ```
 
-9. Envie todos os arquivos para o diretorio da pagina web no servidor.
+9. Envie todos os arquivos para o diretório da pagina web no servidor.
 
 ## O que editar em `site-config.json`
 
@@ -72,25 +72,25 @@ Use string vazia (`""`) para esconder um link ou foto.
 
 ## Dados lidos automaticamente de `cv.xml`
 
-A pagina tenta obter automaticamente:
+A página tenta obter automaticamente:
 
 - nome
-- instituicao
+- instituição
 - endereco profissional
 - e-mails
 - link do Lattes
-- educacao
-- publicacoes
+- educação
+- publicações
 - atividades profissionais
 - projetos
-- estudantes/orientacoes
+- estudantes/orientações
 - ensino
 
 O texto em `description` no `site-config.json` tem prioridade sobre o resumo do XML.
 
 ## Observacao sobre `site-config.js`
 
-O arquivo `site-config.js` existe para permitir pre-visualizacao direta em alguns navegadores. Depois de alterar `site-config.json`, rode sempre:
+O arquivo `site-config.js` existe para permitir pre-visualização direta em alguns navegadores. Depois de alterar `site-config.json`, rode sempre:
 
 ```bash
 node sync-site-config.mjs
